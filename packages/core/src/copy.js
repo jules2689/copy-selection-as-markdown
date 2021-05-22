@@ -1,4 +1,4 @@
-import { doCopy, getSelectionAsMarkdown } from "./util";
+import { doCopy, getSelectionAsMarkdown, sendToReadwise } from "./util";
 
 const RegexEscape = require("regex-escape");
 
@@ -96,7 +96,7 @@ async function main() {
 
     if (options.debug) {
       console.log(`
-/* --- copy-selection-as-markdown debug information ------------------------------------------------------- */
+/* --- copy-selection-to-readwise debug information ------------------------------------------------------- */
 ### INPUT
 
 \`\`\`html
@@ -112,12 +112,13 @@ ${selection.output}
 ### Source URL
 
 ${selection.url}
-/* --- end of copy-selection-as-markdown debug information ------------------------------------------------ */
-Open new issue at https://github.com/0x6b/copy-selection-as-markdown/issues/new with information above.
+/* --- end of copy-selection-to-readwise debug information ------------------------------------------------ */
+Open new issue at https://github.com/0x6b/copy-selection-to-readwise/issues/new with information above.
 
 `      );
     }
     doCopy(text, html);
+    sendToReadwise(options, title, selection.url, selection.output);
   } catch (e) {
     console.error(e);
   }

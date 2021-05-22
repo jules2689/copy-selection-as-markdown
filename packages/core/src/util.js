@@ -168,6 +168,33 @@ const doCopy = (text, html) => {
   clipboard.write(dt);
 };
 
+const sendToReadwise = (options, title, url, text) => {
+  const token = options.readwiseToken;
+  if (typeof token === "undefined" || token === null || token === "") {
+    return;
+  }
+  fetch('https://readwise.io/api/v2/highlights/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`
+    },
+    body: JSON.stringify({
+      'highlights': [
+        {
+          'text': text,
+          'title': title,
+          'source_url': url,
+          'source_type': 'article'
+        },
+      ],
+    })
+  }).catch((err) => {
+    if (typeof err === 'string') err = new Error(err)
+    console.error(err)
+  })
+};
+
 const imgToDataUrl = (image) => {
   return new Promise((resolve) => {
     let img = new Image();
@@ -188,4 +215,4 @@ const imgToDataUrl = (image) => {
   });
 };
 
-export { getSelectionAsMarkdown, doCopy };
+export { getSelectionAsMarkdown, doCopy, sendToReadwise };

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   browser.storage.local.get().then(
     (result) => {
       document.querySelector("#quote").checked =
-        typeof result["use-quote"] === "undefined" ? true : result["use-quote"];
+        typeof result["use-quote"] === "undefined" ? false : result["use-quote"];
       document.querySelector("#link").checked =
         typeof result["link-to-source"] === "undefined"
           ? true
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#mathjax").checked =
         typeof result.mathjax === "undefined" ? false : result.mathjax;
       document.querySelector("#gfm").checked =
-        typeof result.gfm === "undefined" ? false : result.gfm;
+        typeof result.gfm === "undefined" ? true : result.gfm;
       document.querySelector("#linkWithoutStyling").checked =
         typeof result.linkWithoutStyling === "undefined"
           ? false
@@ -58,7 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#replaceAngleBrackets").value =
         typeof result.replaceAngleBrackets === "undefined"
           ? false
-          : result.replaceAngleBrackets;
+        : result.replaceAngleBrackets;
+      document.querySelector("#readwiseToken").value =
+        typeof result.readwiseToken === "undefined"
+          ? null
+          : result.readwiseToken;
     },
     (error) => console.log(`Error: ${error}`)
   );
@@ -100,5 +104,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     reduceListItemPadding: document.querySelector("#reduceListItemPadding")
       .value,
     replaceAngleBrackets: document.querySelector("#replaceAngleBrackets").value,
+    readwiseToken: document.querySelector("#readwiseToken").value,
   });
 });

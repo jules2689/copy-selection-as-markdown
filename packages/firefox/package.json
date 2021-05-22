@@ -1,12 +1,12 @@
 {
-  "name": "copy-selection-as-markdown-firefox",
-  "version": "0.20.4",
-  "description": "copy-selection-as-markdown Firefox addon",
+  "name": "copy-selection-to-readwise-firefox",
+  "version": "0.21.0",
+  "description": "copy-selection-to-readwise Firefox addon",
   "author": "0x6b",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0x6b/copy-selection-as-markdown"
+    "url": "https://github.com/jules2689/copy-selection-to-readwise"
   },
   "scripts": {
     "prebuild": "npm-run-all clean generate-icons",

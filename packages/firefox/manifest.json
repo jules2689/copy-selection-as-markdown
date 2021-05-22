@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Copy Selection as Markdown",
-  "version": "0.20.4",
+  "name": "Copy Selection to Readwise",
+  "version": "0.21.0",
   "description": "Copy title, URL, and selection as Markdown",
   "icons": {
     "48": "icons/extension.svg",
@@ -39,11 +39,6 @@
       "description": "Copy as Markdown"
     }
   },
-  "permissions": ["activeTab", "clipboardWrite", "contextMenus", "storage"],
-  "optional_permissions": ["<all_urls>"],
-  "applications": {
-    "gecko": {
-      "id": "{db9a72da-7bc5-4805-bcea-da3cb1a15316}"
-    }
-  }
+  "permissions": ["activeTab", "clipboardWrite", "contextMenus", "storage", "https://readwise.io/*"],
+  "optional_permissions": ["<all_urls>"]
 }

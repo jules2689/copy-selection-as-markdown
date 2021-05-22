@@ -13,8 +13,8 @@ browser.contextMenus.create(
 
 browser.contextMenus.create(
   {
-    id: "copy-selection-as-markdown",
-    title: "Copy Selection as Markdown",
+    id: "copy-selection-to-readwise",
+    title: "Copy Selection to Readwise",
     contexts: ["selection"],
     documentUrlPatterns: ["<all_urls>"],
   },
@@ -40,7 +40,7 @@ browser.contextMenus.create(
 browser.contextMenus.onClicked.addListener(
   ({ menuItemId, linkText, linkUrl }, { id }) => {
     if (
-      menuItemId === "copy-selection-as-markdown" ||
+      menuItemId === "copy-selection-to-readwise" ||
       menuItemId === "copy-as-markdown"
     ) {
       browser.tabs.executeScript(id, { file: "copy.js" });

@@ -5,18 +5,18 @@
   ],
   "scripts": {
     "build": "run-s build:core build:firefox",
-    "build:core": "yarn workspace copy-selection-as-markdown-core build",
-    "build:firefox": "yarn workspace copy-selection-as-markdown-firefox build",
+    "build:core": "yarn workspace copy-selection-to-readwise-core build",
+    "build:firefox": "yarn workspace copy-selection-to-readwise-firefox build",
     "test": "run-s test:core",
-    "test:core": "yarn workspace copy-selection-as-markdown-core test",
+    "test:core": "yarn workspace copy-selection-to-readwise-core test",
     "generate": "run-s generate:firefox",
-    "generate:firefox": "yarn workspace copy-selection-as-markdown-firefox generate",
+    "generate:firefox": "yarn workspace copy-selection-to-readwise-firefox generate",
     "format": "run-s format:core format:firefox",
-    "format:core": "yarn workspace copy-selection-as-markdown-core format",
-    "format:firefox": "yarn workspace copy-selection-as-markdown-firefox format",
+    "format:core": "yarn workspace copy-selection-to-readwise-core format",
+    "format:firefox": "yarn workspace copy-selection-to-readwise-firefox format",
     "watch": "run-p watch:core watch:firefox",
-    "watch:core": "yarn workspace copy-selection-as-markdown-core watch",
-    "watch:firefox": "yarn workspace copy-selection-as-markdown-firefox watch"
+    "watch:core": "yarn workspace copy-selection-to-readwise-core watch",
+    "watch:firefox": "yarn workspace copy-selection-to-readwise-firefox watch"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^70.0.1",
@@ -28,5 +28,5 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
-  "version": "0.20.4"
+  "version": "0.21.0"
 }

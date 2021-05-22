@@ -1,4 +1,4 @@
-# Copy Selection as Markdown
+# Copy Selection to Readwise
 
 Copy title, URL, selection as Markdown
 
@@ -6,13 +6,13 @@ Copy title, URL, selection as Markdown
 
 ## Install
 
-Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
+Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-to-readwise/) and install.
 
 ## Usage
 
 Right click and select:
 
-- when part of the page is selected: **Copy Selection as Markdown**
+- when part of the page is selected: **Copy Selection to Readwise**
 - when user context-clicks in the page: **Copy Title and URL as Markdown**
 - when user context-clicks in the link: **Copy Link as Markdown**
 
@@ -24,7 +24,7 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 
 1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
 2. In the Add-ons Manager tab, select the **Extensions** panel
-3. Click **Copy Selection as Markdown** and click **Preferences** tab
+3. Click **Copy Selection to Readwise** and click **Preferences** tab
 4. Hit **Save** button on the top to apply changes (no restart required)
 
 ### General

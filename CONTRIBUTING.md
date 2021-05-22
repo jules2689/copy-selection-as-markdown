@@ -17,7 +17,7 @@ Before you do anything else, login on [GitHub](https://github.com/) and [fork](h
 Install [Git](https://git-scm.com/) and clone your forked repository locally.
 
 ```sh
-$ git clone https://github.com/<your-account>/copy-selection-as-markdown.git
+$ git clone https://github.com/<your-account>/copy-selection-to-readwise.git
 ```
 
 ## Play with your fork
